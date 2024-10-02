@@ -13,7 +13,7 @@ def create_hourly_bikesharing_df(df):
     }, inplace=True)
     return hour_df 
 
-all_df = pd.read_csv("main_data.csv")
+all_df = pd.read_csv("dashboard/main_data.csv")
 
 
 all_df["dteday"] = pd.to_datetime(all_df["dteday"])
@@ -190,4 +190,4 @@ with col2:
     ax2.set_ylabel('Count of Registered Users')
     st.pyplot(fig2)  
 
-st.caption('github.com/zarazannetta')
+st.caption('github.com/zarazannetta/Analisis-Data-Python')
