@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
+import os
 from babel.numbers import format_currency
 sns.set(style='dark')
 
@@ -13,7 +14,8 @@ def create_hourly_bikesharing_df(df):
     }, inplace=True)
     return hour_df 
 
-all_df = pd.read_csv("dashboard/main_data.csv")
+script_dir = os.path.dirname(os.path.realpath(__file__))
+all_df= pd.read_csv(f"{script_dir}/main_data.csv")
 
 
 all_df["dteday"] = pd.to_datetime(all_df["dteday"])
