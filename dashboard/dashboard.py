@@ -24,7 +24,7 @@ max_date = all_df["dteday"].max()
 
 with st.sidebar:
     # Menambahkan logo dari freepick.com
-    st.image("bike-icon.png")
+    st.image("https://github.com/zarazannetta/Analisis-Data-Python/blob/master/dashboard/bike-icon.png?raw=true")
     
     # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
